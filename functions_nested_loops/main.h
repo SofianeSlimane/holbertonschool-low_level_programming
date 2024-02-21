@@ -1,4 +1,2 @@
-int _putchar(int a)
-{
-return (a);
-}
+int _putchar(char a);
+
