@@ -7,8 +7,8 @@
  * Return: either 1 or 0
  */
 int _isalpha(int r)
-{ 
-if ((r >= 'a' && r <= 'z') ||( r >= 'A' && r <= 'Z'))
+{
+if ((r >= 'a' && r <= 'z') || (r >= 'A' && r <= 'Z'))
 {
 return (1);
 }
