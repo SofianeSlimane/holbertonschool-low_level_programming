@@ -2,16 +2,16 @@
 #include <stdio.h>
 
 /**
- * main - check the code
+ * _abs - change negative number to its absolute value.
+ * @r: number chosen.
  *
- * Return: Always 0.
+ * Return: absolute value of r.
  */
 int _abs(int r)
 {
-  if (r < 0)
-    {
-      
-      r = r * -1;
-    }
-  return (r);
+if (r < 0)
+{
+r = r * -1;
+}
+return (r);
 }
