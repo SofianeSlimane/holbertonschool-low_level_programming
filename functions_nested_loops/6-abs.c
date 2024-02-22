@@ -8,14 +8,13 @@
  */
 int _abs(int r)
 {
+  r = -98;
   if (r < 0)
     {
-      r = r * (-1);
+      
+      r = r * -1;
       printf("%d\n", r);
     }
-  else
-    {
-      printf("%d\n", r);
-    }
+  
   return (0);
 }
