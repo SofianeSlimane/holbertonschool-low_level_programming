@@ -8,11 +8,16 @@
 int print_last_digit(int r)
 {
   
-  if (r < 0 || r >= 0)
+  if (r >= 0)
     {
       r = r % 10;
   
-    } 
+    }
+  else if (r <0)
+    {
+      
+    
+    
 
 return (r);
 }  
