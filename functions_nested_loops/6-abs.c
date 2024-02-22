@@ -8,7 +8,6 @@
  */
 int _abs(int r)
 {
-  r = -98;
   if (r < 0)
     {
       
