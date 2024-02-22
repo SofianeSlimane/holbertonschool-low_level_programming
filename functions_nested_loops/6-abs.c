@@ -12,7 +12,6 @@ int _abs(int r)
     {
       
       r = r * -1;
-      printf("%d\n", r);
     }
   return (r);
 }
