@@ -7,7 +7,7 @@
  */
 int print_last_digit(int r)
 {
-  while(r <= 0 || r => 0)
+  while(r <= 0 || r <= 0)
     {
   
      r = r % 10;
