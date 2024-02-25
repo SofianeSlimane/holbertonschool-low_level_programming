@@ -2,12 +2,14 @@
 #include <stdio.h>
 
 /**
- * main - check the code
+ * add - check the code
+ * @a: num 1;
+ * @b: num 2;
  *
- * Return: Always 0.
+ * Return: n
  */
 int add(int a, int b)
 {
-  int n = a + b;
-  return (n);
+int n = a + b;
+return (n);
 }
