@@ -14,6 +14,6 @@ void print_line(int n)
     }
   else
     {
-      _putchar((n + '0') * '_');
-}
+       _putchar(n * '_');
+    }
 }
