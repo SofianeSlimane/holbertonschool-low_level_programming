@@ -4,11 +4,11 @@
 int main(void)
 {
   int i;
-  int j;
+  
   for (i = 1; i < 100; i++)
     {
-      for (j = 0; j <=100; j++)
-	{
+   
+	
       if (i % 3 == 0 && i % 5 == 0)
         {
           printf("FizzBuzz");
@@ -25,10 +25,10 @@ int main(void)
 	{
 	  printf("%d", i);
 	}
-    }
       printf(" ");
-
     }
+      
+
   printf("\n");
   return (0);
 }
