@@ -28,10 +28,10 @@ void print_diagonal(int n)
       _putchar('\n');
        
 	}
-      while (k < n)
+      for (k = 0; k < (n - 1); k++)
 	{
 	  _putchar(' ');
-	  k++;
+	  
 	}
 	}
       _putchar('\n');
