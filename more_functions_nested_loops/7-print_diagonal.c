@@ -31,6 +31,7 @@ void print_diagonal(int n)
       while (k < n)
 	{
 	  _putchar(' ');
+	  k++;
 	}
 	}
       _putchar('\n');
