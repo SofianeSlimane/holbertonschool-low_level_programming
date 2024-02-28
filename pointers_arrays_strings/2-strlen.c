@@ -11,7 +11,7 @@ int _strlen(char *s)
   int i;
   for (i = 0; i < *s; i++)
     {
-      printf("%d", *s[i]);
+      printf("%c", *s);
     }
   return (i);
 }
