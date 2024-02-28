@@ -15,7 +15,7 @@ int _strlen(char *s)
       if (i < *s)
 	{
  
-	  _putchar(s[i]);
+	  _putchar(s[0]);
 	}
       
        
