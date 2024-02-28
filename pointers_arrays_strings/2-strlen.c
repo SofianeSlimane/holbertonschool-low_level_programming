@@ -15,7 +15,7 @@ int _strlen(char *s)
       if (i < *s)
 	{
  
-      printf("%d", s[i]);
+	  _putchar(s[i]);
 	}
       
        
