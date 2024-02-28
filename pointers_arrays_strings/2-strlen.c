@@ -12,6 +12,7 @@ int _strlen(char *s)
   for (i = 0; i < *s; i++)
     {
       printf("%c", *s);
+      s++;
     }
   return (i);
 }
