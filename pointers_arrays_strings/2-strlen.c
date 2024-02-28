@@ -8,10 +8,13 @@
  */
 int _strlen(char *s)
 {
-  
+  int i;
+
+  for (i = 0; i < *s ; i++)
+    {
  
-      printf("%p", s[0]);
-     
+      printf("%d", s[0]);
+    }
    
   return (*s);
 }
