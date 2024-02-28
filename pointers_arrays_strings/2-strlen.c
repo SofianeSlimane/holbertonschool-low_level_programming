@@ -12,9 +12,14 @@ int _strlen(char *s)
 
   for (i = 0; i < *s ; i++)
     {
+      if (i < *s)
+	{
  
       printf("%d", s[i]);
-    }
-   
-  return (*s);
+	}
+      
+       
 }
+  return (i);
+    }      
+
