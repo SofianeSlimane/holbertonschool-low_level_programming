@@ -8,11 +8,10 @@
  */
 int _strlen(char *s)
 {
-  int i;
-  for (i = 0; i < *s; i++)
-    {
+  
+ 
       printf("%d", *s);
-      s++;
-    }
-  return (i);
+     
+   
+  return (*s);
 }
