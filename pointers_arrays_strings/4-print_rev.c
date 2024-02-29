@@ -8,8 +8,14 @@
 void print_rev(char *s)
 {
   int i = 0;
-  for (i = i - 1 ; s[i] != 0; i--)
+  int taille;
+  
+  for (taille = 0 ; s[taille] != '\0'; i++)
+    {
+    }
+  for (i = taille - 1; i < taille; i--)
     {
       _putchar(s[i]);
     }
 }
+     
