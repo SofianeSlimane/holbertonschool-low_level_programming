@@ -9,12 +9,10 @@
  */
 int _strlen(char *s)
 {
-int taille;
-for (taille = 0; s[taille] != '\0'  ; taille++)
+int i;
+for (i = 0; s[i] != '\0'  ; i++)
 {
 }
- for (i = taille -1; i >= 0; i--)
-   {
-     printf("%c", s[i]);
+
 return (i);
 }
