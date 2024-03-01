@@ -16,9 +16,17 @@ void puts_half(char *str)
     {
  
     }
+  if (taille % 2 == 0)
+    {
   for (i = (taille - 1) / 2; str[i] != '\0'; i++)
     {
       _putchar(str[i]);
+    }
+    }
+  else
+    {
+      taille = taille -1;
+      _putchar(str[taille]);
     }
 }
 	
