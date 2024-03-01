@@ -10,5 +10,5 @@ void rev_string(char *s)
   for (i = taille -1; s[i] != '\0'; s--)
     {
     }
-  s = i + '0';
+  
 }
