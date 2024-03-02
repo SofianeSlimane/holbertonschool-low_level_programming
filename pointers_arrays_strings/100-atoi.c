@@ -18,12 +18,14 @@ int _atoi(char *s)
         {
           _putchar(s[i]);
         }
+      else
+	{
+	  return (0);
+	}
     }
-    
-  
-    return ('\n');
-
 }
+  
+   
   
   
      
