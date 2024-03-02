@@ -19,7 +19,7 @@ int _atoi(char *s)
 	}
       else
 	{
-	  printf("%d", s[i]);
+	  printf("%d", i);
     }
     }
   return (0);
