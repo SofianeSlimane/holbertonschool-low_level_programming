@@ -9,6 +9,7 @@ void rev_string(char *s)
     }
   for (i = taille -1; i != '\0'; i--)
     {
+      s = 
     }
   
 }
