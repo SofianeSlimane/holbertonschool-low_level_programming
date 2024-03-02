@@ -13,7 +13,7 @@ int _atoi(char *s)
   
 for (i = 0; s[i] != '\0'; i++)
   {
-    printf("%c", s[i] - '0');
+    printf("%d", s[i] - '0');
   }
  return ('\n');
 }
