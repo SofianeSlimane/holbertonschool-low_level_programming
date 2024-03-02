@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 
 
 
@@ -19,7 +19,7 @@ int _atoi(char *s)
 	}
       else
 	{
-	  _putchar(s[i] - '0');
+	  printf("%d", s[i]);
     }
     }
   return (0);
