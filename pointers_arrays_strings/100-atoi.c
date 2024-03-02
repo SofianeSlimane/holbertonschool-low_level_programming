@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 
 
 
@@ -11,18 +11,18 @@ int _atoi(char *s)
 {
   int i;
   for (i = 0; s[i] != '\0'; i++)
-
     {
-      if (!(s[i] >= '0' || s[i] <= '9'))
+      if (!(s[i] >= '0' && s[i] <= '9'))
 	{
 	  return (0);
 	}
-      else
+      else if (s[i] >= '0' && s[i] <= '9')
 	{
-	  printf("%d", i);
+	  _putchar(s[i] + '0');
     }
     }
   return (0);
-}
+    }
+  
   
      
