@@ -23,10 +23,11 @@ void puts_half(char *str)
       _putchar(str[i]);
     }
     }
-  else
+  else if (taille % taille == 1)
     {
-      taille = taille -1;
-      _putchar(str[taille]);
+      i = taille -1;
+      _putchar(str[i]);
+      
     }
 }
 	
