@@ -7,6 +7,7 @@ char *_strcat(char *dest, char *src)
 
   int i;
   int taille;
+  int j; 
   char *ptr = dest;
 
   for (taille = 0; dest[taille] != '\0'; taille++)
@@ -16,6 +17,10 @@ char *_strcat(char *dest, char *src)
     {
       dest[taille + 1] += src[i];
     }
+
+
+  
+ 
   
   return (ptr);
 }
