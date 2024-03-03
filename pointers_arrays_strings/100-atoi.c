@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+11;rgb:2b2b/2b2b/2b2b#include <stdio.h>
 
 
 
@@ -15,8 +15,8 @@ for (i = 0; s[i] != '\0'; i++)
   {
     if (s[i] >= '0' || s[i] <= '9')
       {
-	printf("%d", s[i] - '0');
+	s[i] -= '0';
       }
   }
- return (0);
+ return (s[i]);
 }
