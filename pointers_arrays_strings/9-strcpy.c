@@ -4,15 +4,15 @@
 char *_strcpy(char *dest, char *src)
 {
   int i;
-  int j;
-  for (i = 0; src[i] != '\0' || src[i] == '\0'; i++)
+  int taille;
+  for (taille = 0; src[taille] != '\0'; taille++)
     {
     }
-  i = 0;
 
-  for (j = 0; dest[j] == i[src]; j++)
+  for (i = 0; i < taille - 1; i++)
     {
-      dest[j] += i[src];
+      dest[i] = src[i];
+      
     }
   return (0);
 }
