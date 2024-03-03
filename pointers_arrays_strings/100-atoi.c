@@ -13,13 +13,10 @@ int _atoi(char *s)
   
 for (i = 0; s[i] != '\0'; i++)
   {
-    printf("%d", s[i] - '0');
+    if (s[i] >= '0' || s[i] <= '9')
+      {
+	printf("%d", s[i] - '0');
+      }
   }
- return ('\n');
+ return (0);
 }
-
-
-   
-  
-  
-     
