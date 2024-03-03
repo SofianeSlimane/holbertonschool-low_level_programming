@@ -8,11 +8,12 @@ char *_strcpy(char *dest, char *src)
   for (i = 0; src[i] != '\0' || src[i] == '\0'; i++)
     {
     }
-  
-  dest = src;
-  for (j = 0; j <= i; j++)
-	 {
-	   _putchar(dest[j]);
-	 }
-  return (dest);
+  i = 0;
+
+  for (j = 0; dest[j] == i[src]; j++)
+    {
+      dest[j] += i[src];
+    }
+  return (0);
 }
+ 

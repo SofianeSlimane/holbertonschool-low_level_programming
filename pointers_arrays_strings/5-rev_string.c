@@ -7,9 +7,12 @@ void rev_string(char *s)
   for (taille = 0; s[taille] != '\0'; taille++)
     {
     }
-  for (i = taille -1; i != '\0'; i--)
+
+  if (taille > 0)
     {
-      s = 
+  for (i = taille -1; s[i] != '\0'; i--)
+    {
+      
     }
-  
+    }
 }
