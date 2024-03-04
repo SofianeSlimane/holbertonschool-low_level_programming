@@ -1,0 +1,19 @@
+#include "main.h"
+
+unsigned int _strspn(char *s, char *accept)
+
+{
+  int i;
+  for (i = 0; s[i] != c && s[i] != '\0'; i++)
+    {
+      if (s[i] == c)
+	{
+	  return (s == c);
+	  else if (s[i] != c)
+	    {
+	      return ('\0');
+	    }
+	}
+    }
+    }
+  
