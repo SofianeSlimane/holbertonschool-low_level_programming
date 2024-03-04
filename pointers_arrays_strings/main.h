@@ -1,6 +1,6 @@
+int _putchar(char c);
 void reset_to_98(int *n);
 int _strlen(char *s);
-int _putchar(char c);
 void _puts(char *str);
 void print_rev(char *s);
 void puts2(char *str);
@@ -12,3 +12,4 @@ int _atoi(char *s);
 char *_strcat(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
 char *_memset(char *s, char b, unsigned int n);
+
