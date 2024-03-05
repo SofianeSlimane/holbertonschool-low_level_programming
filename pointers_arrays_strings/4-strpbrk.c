@@ -1,0 +1,22 @@
+#include "main.h"
+
+/**
+ * _strpbrk - search a string for mathing characters
+ * @s: pointer to string
+ * @accept: pointer to string containing characters to match
+ * Return: pointer to the characters that matches
+ */
+
+char  *_strpbrk(char *s, char *accept)
+{
+int i;
+for (i = 0; s[i] != '\0'; i++)
+{
+if (s[i] == accept[i])
+{
+s = s + (i - 1);
+return (s);
+}
+}
+return ('\0');
+}
