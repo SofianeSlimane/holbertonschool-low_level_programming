@@ -1,0 +1,5 @@
+#include "main.h"
+
+
+
+oid print_diagsums(int *a, int size);

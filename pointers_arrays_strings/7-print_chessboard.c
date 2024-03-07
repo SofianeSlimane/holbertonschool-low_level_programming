@@ -8,9 +8,18 @@ void print_chessboard(char (*a)[8])
 
 {
 
-  int i;
-  int j;
-  for (i = 0; a[i] != '\0'; i++)
+  
+  
+  for (a = 0; a != '\0' ; i++)
     {
-      for (j = 0; 
+      if (a => 'a' && a <= 'z' || a => 'A' && a <= 'Z')
+	{
+	  _putchar(a);
+	}
+      else if (a == ' ')
+	{
+	  _putchar('\n');
+	}
+    }
+     
       

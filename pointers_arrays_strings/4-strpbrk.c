@@ -13,9 +13,8 @@ int i;
 for (i = 0; s[i] != '\0'; i++)
 {
 if (s[i] == accept[i])
-{
-s = s + (i - 1);
-return (s);
+{ 
+return (accept);
 }
 }
 return ('\0');
