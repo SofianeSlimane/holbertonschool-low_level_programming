@@ -18,11 +18,11 @@ if (accept[i] == *s)
 {
 len++;
 }
-else if (accept[i] == '\0')
+else if (accept[i] == '\0' || accept[i] != *s)
 {
   break;
 }
-
+ 
 }
 }
 return (len + 1);
