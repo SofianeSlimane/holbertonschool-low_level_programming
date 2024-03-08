@@ -20,7 +20,6 @@ len++;
 }
 else if (accept[i] == '\0')
 {
-len++;
 }
 }
 }
