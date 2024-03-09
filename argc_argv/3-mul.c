@@ -21,7 +21,7 @@ product *= atoi(argv[i]);
 }
 else if (argc != 3)
 {
-printf("Error");
+printf("Error\n");
 return (1);
 }
 printf("%d\n", product);
