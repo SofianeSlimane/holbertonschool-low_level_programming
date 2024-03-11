@@ -12,18 +12,21 @@ char *create_array(unsigned int size, char c)
     {
       return (NULL);
     }
+  
+  tab = malloc(size * sizeof(char));
+  if ( tab == NULL)
+    {
+      return (NULL);
+    }
   else
     {
       for (i = 0; i < size; i++)
 	{
-	  tab = malloc(i * sizeof(char));
+	  
 	  tab += c;
 	}
     }
-  if (tab == NULL)
-    {
-      return (NULL);
-    }
+  
   
       return(tab);
       free(tab);
