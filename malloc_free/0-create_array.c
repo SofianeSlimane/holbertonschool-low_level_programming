@@ -20,12 +20,12 @@ return (NULL);
 tab = malloc(size * sizeof(char));
 for (i = 0; i < size; i++)
 {
-tab[i] += c;
+tab[i] = c;
 }
 if (tab == NULL)
 {
 return (NULL);
 }
 return (tab);
- free(tab);
+free(tab);
 }
