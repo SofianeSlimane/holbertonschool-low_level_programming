@@ -1,5 +1,6 @@
 #include "main.h"
-#include <stdlib.h>
+0;276;0c#include <stdlib.h>
+
 /**
  * create_array - create and array made of a specific character
  * @c: character to be added to each places of array
@@ -26,5 +27,5 @@ if (tab == NULL)
 return (NULL);
 }
 return (tab);
-free(tab);
+ free(tab);
 }
