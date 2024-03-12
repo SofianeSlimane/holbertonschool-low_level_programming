@@ -19,13 +19,13 @@ for (j = 0; str[j] != '\0'; j++)
 {
 }
 str2 = malloc(sizeof(char) * j + 1);
-for (i = 0; i <= j; i++)
-{
-str2[i] = str[i];
-}
 if (str2 == NULL)
 {
 return (NULL);
+}
+for (i = 0; i <= j; i++)
+{
+str2[i] = str[i];
 }
 return (str2);
 free(str2);
