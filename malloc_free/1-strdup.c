@@ -26,6 +26,10 @@ for (i = 0; i <= j; i++)
 str2[i] = str[i];
 }
 }
+if (str2 == NULL)
+{
+return (NULL);
+}
 return (str2);
 free(str2);
 }
