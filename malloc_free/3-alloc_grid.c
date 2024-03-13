@@ -31,6 +31,7 @@ for (k = 0; k <= i ; k++)
 {
 free(ptp[k]);
 }
+free(ptp);
 return (NULL);
 }
 for (l = 0; l < width; l++)
