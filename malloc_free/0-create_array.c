@@ -27,5 +27,4 @@ if (tab == NULL)
 return (NULL);
 }
 return (tab);
-free(tab);
 }
