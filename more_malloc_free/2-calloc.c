@@ -21,12 +21,12 @@ if (size == 0)
 {
 return (NULL);
 }
- p = malloc(nmemb * sizeof(size));
+p = malloc(nmemb * sizeof(size));
 if (p == NULL)
 {
 return (NULL);
 }
-for (i = 0; i < nmemb * size ; i++)
+ for (i = 0; i < (nmemb * size) ; i++)
 {
 p[i] = 0;
 }
