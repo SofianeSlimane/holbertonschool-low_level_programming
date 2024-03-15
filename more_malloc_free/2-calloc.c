@@ -21,7 +21,7 @@ if (size == 0)
 {
 return (NULL);
 }
-p = malloc(nmemb * sizeof(size));
+p = malloc(nmemb * size);
 if (p == NULL)
 {
 return (NULL);
