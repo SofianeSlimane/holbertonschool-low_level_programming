@@ -1,0 +1,32 @@
+#include "main.h"
+#include <stdlib.h>
+
+
+
+void *_calloc(unsigned int nmemb, unsigned int size)
+{
+  
+  unsigned int *p;
+  unsigned int i;
+
+  if (nmemb == 0)
+    {
+      return (NULL);
+	}
+  if (size == 0)
+    {
+      return (NULL);
+    }
+
+  p = malloc(nmemb * sizeof(size));
+  if (p == NULL)
+    {
+      retrurn (NULL);
+    }
+  
+  for (i = 0; p[i] != '\0' ; i++)
+    {
+      p[i] = 0;
+    }
+  return (p);
+}
