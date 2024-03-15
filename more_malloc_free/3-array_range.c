@@ -15,26 +15,34 @@ int *array_range(int min, int max)
     {
       return (NULL);
     }
-    
+  if (min == max)
+    {
+      p = malloc(sizeof(int));
+      
+    }
   p = malloc((min + max + 1) * sizeof(int));
   if (p == NULL)
     {
       return (NULL);
     }
-  i = 0;
+  if (min == max)
+    { i = 0;
+      while (p[i] != max)
+      p[i] = min;
+      i++;
+    }
+	
+  else if (min < max)
+    {
+      i = 0;
   while (min < max)
     {
-      if (min == max)
-	{
-	  p[i] = min;
-	  min++;
-	  i++;
-	}
+   
   
       p[i] = min;
       min++;
       i++;
     }
-  
+    } 
   return (p);
 }
