@@ -12,7 +12,7 @@ void *p;
 p = malloc(sizeof(b));
 if (p == NULL)
 {
-  return (NULL);
+
 exit(98);
 }
 return (p);
