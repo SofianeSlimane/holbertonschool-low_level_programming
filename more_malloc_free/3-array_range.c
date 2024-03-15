@@ -18,15 +18,23 @@ int *array_range(int min, int max)
   if (min == max)
     {
       p = malloc(sizeof(int));
+      if (p == NULL)
+	{
+	  return (NULL);
+	}
       
     }
+  else
+    {
   p = malloc((min + max + 1) * sizeof(int));
   if (p == NULL)
     {
       return (NULL);
     }
+    }
+  i = 0;
   if (min == max)
-    { i = 0;
+    { 
       while (p[i] != max)
       p[i] = min;
       i++;
@@ -34,7 +42,7 @@ int *array_range(int min, int max)
 	
   else if (min < max)
     {
-      i = 0;
+      
   while (min < max)
     {
    
