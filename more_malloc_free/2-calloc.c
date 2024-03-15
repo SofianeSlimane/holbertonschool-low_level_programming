@@ -26,7 +26,7 @@ if (p == NULL)
 {
 return (NULL);
 }
-for (i = 0; p[i] != '\0' ; i++)
+for (i = 0; p[i] < nmemb ; i++)
 {
 p[i] = 0;
 }
