@@ -22,5 +22,9 @@ return (NULL);
 new_dog->age = age;
 new_dog->name = ptr1;
 new_dog->owner = ptr2;
+if (new_dog == NULL)
+{
+return (NULL);
+}
 return (new_dog);
 }
