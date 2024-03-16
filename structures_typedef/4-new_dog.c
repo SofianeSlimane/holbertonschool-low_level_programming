@@ -22,6 +22,5 @@ return (NULL);
 new_dog->age = age;
 new_dog->name = ptr1;
 new_dog->owner = ptr2;
-free(new_dog);
 return (new_dog);
 }
