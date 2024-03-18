@@ -17,8 +17,12 @@ if (size <= 0)
 return (-1);
 }
 i = 0;
-while (i < size && cmp(array[i]) == 0)
+while (i <= size && cmp(array[i]) == 0)
 {
+if (i == size)
+{
+return (-1);
+}
 i++;
 }
 return (i);
