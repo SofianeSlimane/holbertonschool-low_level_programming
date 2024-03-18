@@ -21,7 +21,7 @@ while (i <= size && cmp(array[i]) == 0)
 {
 i++;
 }
-if (i == 0)
+if (i == size)
 {
 return (-1);
 }
