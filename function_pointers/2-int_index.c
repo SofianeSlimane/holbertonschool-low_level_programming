@@ -16,13 +16,11 @@ if (size <= 0)
 {
 return (-1);
 }
-for (i = 0; i < size; i++)
+i = 0;
+while (i < size && cmp(array[i]) == 0)
 {
 cmp(array[i]);
-if (cmp(array[i]) != 0)
-{
+i++;
+}
 return (i);
-}
-}
-return (0);
 }
