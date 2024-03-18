@@ -22,5 +22,9 @@ while (i < size && cmp(array[i]) == 0)
 cmp(array[i]);
 i++;
 }
+if (!(cmp(array[i])))
+{
+return (-1);
+}
 return (i);
 }
