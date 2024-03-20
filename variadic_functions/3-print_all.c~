@@ -1,0 +1,18 @@
+#include "variadic_functions.h"
+#include <stdio.h>
+#include <stdarg.h>
+
+
+
+
+
+void print_all(const char * const format, ...)
+{
+  int i;
+  for (i = 0; format[i] != '\0'; i++)
+    {
+  printf("%s", format[i]);
+    }
+}
+
+	
