@@ -1,6 +1,6 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
-
+#include <stdio.h>
 
 
 
@@ -8,7 +8,7 @@ int sum_them_all(const unsigned int n, ...)
 {
   unsigned int i;
   int somme;
-va_list args;
+  va_list args;
   va_start(args, n);
 
   if (n == 0)
@@ -18,7 +18,7 @@ va_list args;
 
   for (i = 0; i < n; i++)
     {
-      somme  += va_arg(args, unsigned int);
+      somme  += va_arg(args, int);
       
     }
   va_end(args);
