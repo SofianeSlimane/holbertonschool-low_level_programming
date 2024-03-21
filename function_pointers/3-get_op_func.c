@@ -19,12 +19,11 @@ op_t ops[] = {
  int i;
  while (ops[i].op != NULL)
    {
-     if (ops[i].op == NULL || ops[i].f == NULL)
+     if (ops[i].op == NULL)
        {
 	 return (NULL);
        }
-     s = ops[i].op;
      i++;
    }
- return(get_op_func(s));
+ return(ops[i].f);
 }
