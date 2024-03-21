@@ -1,7 +1,7 @@
 #include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 
 
 
@@ -17,13 +17,15 @@ op_t ops[] = {
         {NULL, NULL}
     };
  int i;
+ i = 0;
  while (ops[i].op != NULL)
    {
-     if (ops[i].op == NULL)
-       {
-	 return (NULL);
-       }
+     if (strcmp(ops[i].op, s) == 0 && s != NULL)
+       
+	 return (ops[i].f);
+       
      i++;
+     
    }
- return(ops[i].f);
+ return (NULL);
 }

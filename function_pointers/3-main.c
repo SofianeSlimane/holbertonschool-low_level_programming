@@ -8,18 +8,20 @@
 
 int main (int argc, char *argv[])
 {
-  int (*f)(int, int);
-  int num1 = atoi(argv[1]);
-  int num2 = atoi(argv[3]);
- 
+
+  int num1;
+  int num2;
+  char *operator;
  
   if (argc != 4)
     {
       printf("Error\n");
       exit (98);
     }
-  f = get_op_func(argv[2]);
-  if (f == NULL)
+  operator = argv[2];
+  num1 = atoi(argv[1]);
+  num2 = atoi(argv[3]);
+  if (operator == NULL)
     {
       printf("Error\n");
       exit (99);
@@ -32,6 +34,6 @@ int main (int argc, char *argv[])
     }
   
 
-  printf("%d", f(num1, num2));
+  printf("%d\n", get_op_func(operator)(num1, num2));
   return (0);
 }
