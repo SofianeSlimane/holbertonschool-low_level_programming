@@ -5,4 +5,15 @@ int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
+typedef struct sp
+{
+  char *sp;
+  int (*f)(va_list args);
+}sp_t;
+
+int print_c(char);
+int print_i(int);
+int print_f(float);
+int print_s(char *);
+
 #endif
