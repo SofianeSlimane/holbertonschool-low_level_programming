@@ -21,9 +21,5 @@ while (i <= size && cmp(array[i]) == 0)
 {
 i++;
 }
-if (cmp == NULL)
-{
-return (-1);
-}
 return (i);
 }
