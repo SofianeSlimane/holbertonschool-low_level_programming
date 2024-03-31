@@ -25,7 +25,7 @@ newNode->next = NULL;
 if (*head == NULL)
 {
 	*head = newNode;
-	return (NULL);
+	return (newNode);
 }
 pointer = *head;
 while (pointer->next != NULL)
