@@ -15,10 +15,14 @@ list_t *add_node(list_t **head, const char *str)
 	 for (i = 0; stringCopy[i] != '\0'; i++)
 	 {
 	 }
-	 newNode = malloc(sizeof(list_t)); /*µAllocates memory for our new nod*/
-	 newNode->str = stringCopy;/*Assigns a string value to our new node*/
+	 newNode = malloc(sizeof(list_t)); /* Allocates memory for our new node*/
+	if (newNode == NULL)
+	{
+		return (NULL);
+	}	
+	 newNode->str = stringCopy;
 	 newNode->len = i;
-	 newNode->next = *head; /*Our new node will now points to the node head points to */
+	 newNode->next = *head; /*Our new node will now points to the node head points to*/
 	 *head = newNode; /*Changes the node head points to, to our new node*/
 	 return (newNode);
 }
