@@ -20,7 +20,7 @@ list_t *add_node(list_t **head, const char *str)
 	 newNode->len = i;
 	 newNode->next = *head; /*Our new node will now points to the node head points to*/
 	 *head = newNode; /*Changes the node head points to, to our new node*/
-	 if (newNode == NULL)
+	 if (*head == NULL)
 	 {
 		 return (NULL);
 	}
