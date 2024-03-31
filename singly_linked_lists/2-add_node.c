@@ -20,14 +20,14 @@ list_t *add_node(list_t **head, const char *str)
 	{
 	}
 	newNode = malloc(sizeof(list_t));/* Allocates memory for our new node*/
+	if (newNode == NULL)
+	{
+		return (NULL);
+	}
 	newNode->str = stringCopy;
 	newNode->len = i;
 	newNode->next = *head;/*node will now points to the node head points to*/
 	*head = newNode;/*Changes the node head points to, to our new node*/
-	if (*head != newNode)
-	{
-		return (NULL);
-	}
 	return (newNode);
 }
 
