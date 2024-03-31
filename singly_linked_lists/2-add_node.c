@@ -24,7 +24,7 @@ list_t *add_node(list_t **head, const char *str)
 	newNode->len = i;
 	newNode->next = *head;/*node will now points to the node head points to*/
 	*head = newNode;/*Changes the node head points to, to our new node*/
-	if (*head == NULL)
+	if (*head != newNode)
 	{
 		return (NULL);
 	}
