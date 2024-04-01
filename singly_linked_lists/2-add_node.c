@@ -19,7 +19,7 @@ list_t *add_node(list_t **head, const char *str)
 	{
 		return (NULL);
 	}
-	stringCopy = strdup(str);/*Assigns a copy of str to stringCopy*/
+	stringCopy = strdup(str);
 	for (i = 0; stringCopy[i] != '\0'; i++)
 	{
 	}
@@ -29,6 +29,11 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	}
 	newNode->str = stringCopy;
+	if (newNode->str == NULL)
+	{
+		free(newNode);
+		return (NULL);
+	}
 	newNode->len = i;
 	newNode->next = *head;/*node will now points to the node head points to*/
 	*head = newNode;/*Changes the node head points to, to our new node*/
