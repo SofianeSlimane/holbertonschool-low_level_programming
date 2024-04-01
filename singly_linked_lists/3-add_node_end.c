@@ -10,16 +10,28 @@
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-int i;
-char *stringCopy;
+unsigned int i;
 list_t *newNode;
 list_t *pointer;
-stringCopy = strdup(str);
-for (i = 0; stringCopy[i] != '\0'; i++)
+
+if (str == NULL)
 {
+	return (NULL);
 }
 newNode = malloc(sizeof(list_t));
-newNode->str = stringCopy;
+if (newNode == NULL)
+{
+	return (NULL);
+}
+newNode->str = strdup(str);
+if (newNode->str == NULL)
+{
+	free(newNode);
+	return (NULL);
+}
+for (i = 0; newNode->str[i] != '\0'; i++)
+{
+}
 newNode->len = i;
 newNode->next = NULL;
 if (*head == NULL)
