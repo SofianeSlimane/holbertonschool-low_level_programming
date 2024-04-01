@@ -15,6 +15,10 @@ list_t *add_node(list_t **head, const char *str)
 	char *stringCopy;/*Declares a variable that will holds the value of str*/
 	list_t *newNode;/*Declares a pointer to a new node*/
 
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 	stringCopy = strdup(str);/*Assigns a copy of str to stringCopy*/
 	for (i = 0; stringCopy[i] != '\0'; i++)
 	{
