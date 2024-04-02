@@ -13,7 +13,5 @@ while ( head != NULL)
 
 	free(pointer->str);
 	free(pointer);
-	
 }
-
 }
