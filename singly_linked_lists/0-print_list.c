@@ -10,10 +10,8 @@
 size_t print_list(const list_t *h)
 {
 	size_t numberOfNodes;
-	const list_t *pointer;
+	const list_t *pointer = h;
 
-	pointer = malloc(sizeof(const list_t));
-	pointer = h;
 	for (numberOfNodes = 0; pointer != NULL; numberOfNodes++)
 	{
 		if (pointer->str == NULL)
