@@ -41,9 +41,8 @@ while (ptr != NULL && i < index)
 ptr2 = ptr->prev;
 if (ptr->next == NULL)
 {
-	ptr2->next = ptr;
-	ptr->prev = ptr2;
 	free(ptr);
+	ptr2->next = NULL;
 	return (1);
 }
 ptr2->next = ptr->next;
