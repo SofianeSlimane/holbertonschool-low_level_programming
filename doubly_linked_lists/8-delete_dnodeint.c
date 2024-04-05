@@ -20,11 +20,13 @@ if (index == 0)
 {
 	if ((*head)->next == NULL)
 	{
-		*head = (*head)->next;
+		free(*head);
+		*head = NULL;
 		return (1);
 	}
 	*head = (*head)->next;
 	free((*head)->prev);
+	(*head)->prev = NULL;
 	return (1);
 }
 ptr = *head;
@@ -33,10 +35,6 @@ while (ptr != NULL && i < index)
 {
 	ptr = ptr->next;
 	i++;
-}
-if (ptr == NULL)
-{
-	return (-1);
 }
 ptr2 = ptr->prev;
 if (ptr->next == NULL)
