@@ -40,7 +40,7 @@ if (ptr->next == NULL)
 	ptr2->next = ptr;
 	ptr->prev = ptr2;
 	free(ptr);
-	return (-1);
+	return (1);
 }
 ptr2->next = ptr->next;
 ptr->next->prev = ptr2;
