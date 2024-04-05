@@ -33,6 +33,8 @@ ptr = *head;
 i = 0;
 while (ptr != NULL && i < index)
 {
+	if (ptr->next == NULL)
+		return (-1);
 	ptr = ptr->next;
 	i++;
 }
