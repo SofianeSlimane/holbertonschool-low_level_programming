@@ -34,6 +34,10 @@ while (ptr != NULL && i < index)
 	ptr = ptr->next;
 	i++;
 }
+if (ptr == NULL)
+{
+	return (-1);
+}
 ptr2 = ptr->prev;
 if (ptr->next == NULL)
 {
