@@ -1,6 +1,10 @@
 #include "main.h"
 #include <stdlib.h>
-
+/**
+ * print_binary - prints binary representation of an unsigned integer
+ * @n: unsigned integer
+ * Return: binary representation
+ */
 
 
 
@@ -9,38 +13,28 @@ void print_binary(unsigned long int n)
 {
 	unsigned int table;
 
-
 	if (n == 0)
 	{
 		_putchar('0');
-		exit(0);
 	}
 	table = 1;
-	while (table < n)
+	while (table <= n)
 	{
-		if ((table *= 2) > n)
-		{
-			break;
-		}
 		table *= 2;
 	}
-
-	while (n >= 0)
+	table /= 2;
+	while (table > 0)
 	{
-		if (n == 0)
-		{
-			_putchar('0');
-			break;
-		}
-		if (n > table)
+		if (n >= table)
 		{
 			_putchar('1');
+			n -= table;
 		}
 		else if (table > n)
 		{
 			_putchar('0');
 		}
-		n -= table;
+		table /= 2;
 	}
 }
 
