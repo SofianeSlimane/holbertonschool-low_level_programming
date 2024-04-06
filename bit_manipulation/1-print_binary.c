@@ -22,7 +22,7 @@ void print_binary(unsigned long int n)
 	{
 		table *= 2;
 	}
-	table /= 2;
+	table >>= 1;
 	while (table > 0)
 	{
 		if (n >= table)
@@ -34,7 +34,7 @@ void print_binary(unsigned long int n)
 		{
 			_putchar('0');
 		}
-		table /= 2;
+		table >>= 1;
 	}
 }
 
