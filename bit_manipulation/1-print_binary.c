@@ -30,7 +30,7 @@ void print_binary(unsigned long int n)
 			_putchar('1');
 			n -= table;
 		}
-		else if (table > n)
+		else
 		{
 			_putchar('0');
 		}
