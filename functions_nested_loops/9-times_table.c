@@ -22,10 +22,16 @@ void  times_table(void)
 			_putchar('0' + first_num);
 			_putchar('0' + second_num);
 		}
-		
-		if (j < 9) {
-		_putchar(',');
+		if (j < 9){
+			_putchar(',');
+		}
+		if (result < 9 && j < 9) {
 		 _putchar(' ');
+		  _putchar(' ');
+		}
+		else if (result >= 10 && j < 9) {
+                 _putchar(' ');
+
 		}
 		
 	}
