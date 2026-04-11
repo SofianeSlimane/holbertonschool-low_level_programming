@@ -13,6 +13,11 @@ i = 0;
 j = 0;
 k = 0;
 s = size - 1;
+if (size <= 0)
+{
+_putchar('\n');
+return;
+}
 
 while (i < size)
 {
