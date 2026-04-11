@@ -5,24 +5,32 @@
  *
  * Return: Always 0.
  */
+
+
 void  times_table(void)
 {
-  int i;
-  int a = 48;
-  int j;
+  int i, j;
+  for (i = 0; i < 10; i++) {
+  	for (j = 0; j < 10; j++) {
+		int result = i * j;
+		if (result < 10)  {
+			_putchar('0' + result);
+		}
+		else {
+			int first_num = result / 10;
+			int second_num = result % 10;
+			_putchar('0' + first_num);
+			_putchar('0' + second_num);
+		}
+		
+		if (j < 9) {
+		_putchar(',');
+		 _putchar(' ');
+		}
+		
+	}
+	_putchar('\n');
+  }
 
-  for (i = 48; i <= 57; i++)
-    {
-      for (j = 48; j <= 57; j++)
-	{
-	  _putchar(a * i);
-	  _putchar(',');
-	  _putchar(' ');
-	  a++;
-	    }
-      _putchar('\n');
-      
-    }
 }
-	  
-  
+
