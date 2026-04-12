@@ -25,11 +25,30 @@ void rev_string(char *s)
 int  i, j;
 char tmp;
 j = _strlen(s) - 1;
+
+if (_strlen(s) == 0)
+{
+return;
+}
+
+if (_strlen(s) % 2 == 0)
+{
+for (i = 0; i != j - 1; i++)
+{
+tmp = s[i];
+s[i] = s[j];
+s[j] = tmp;
+j--;
+}
+}
+else
+{
 for (i = 0; i != j; i++)
 {
 tmp = s[i];
 s[i] = s[j];
 s[j] = tmp;
 j--;
+}
 }
 }
