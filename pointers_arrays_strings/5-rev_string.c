@@ -33,11 +33,15 @@ return;
 
 if (_strlen(s) % 2 == 0)
 {
-for (i = 0; i != j - 1; i++)
+for (i = 0; i != j; i++)
 {
 tmp = s[i];
 s[i] = s[j];
 s[j] = tmp;
+if (i == j - 1)
+{
+break;
+}
 j--;
 }
 }
