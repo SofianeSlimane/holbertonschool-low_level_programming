@@ -26,19 +26,17 @@ int contains_char(char *s, char c)
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, count, curr_count;
+	int i, count;
 
 	count = 0;
-	curr_count = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (curr_count > count)
-			count = curr_count;
 		if (contains_char(accept, s[i]))
-			curr_count++;
+			count++;
 		else
-			curr_count = 0;
+			break;
+
 	}
 
 	return (count);
