@@ -27,6 +27,8 @@ char *_strstr(char *haystack, char *needle)
 
 	count = 0;
 	len_needle = _strlen(needle);
+	if (len_needle == 0)
+		return (haystack);
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
 		first_occur = haystack + i;
