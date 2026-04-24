@@ -9,43 +9,26 @@
 
 int *array_range(int min, int max)
 {
-  int *p = NULL;
-  int i;  
-if (min > max)
-    {
-      return (NULL);
-    }
-if (min == max)
-    {
-      p = malloc(sizeof(int));
-    }
-else
-    {
-p = malloc((min + max + 1) * sizeof(int));
-    }
-if (p == NULL)
-    {
-      return (NULL);
-    }
-i = 0;
-if (min == max)
-    { 
-      while (p[i] != max)
-      p[i] = min;
-      i++;
-    }
-	
-else if (min < max)
-    {
-      
- while (min < max)
-    {
-   
-  
-      p[i] = min;
-      min++;
-      i++;
-    }
-    } 
-return (p);
+	int *p = NULL;
+	int i;
+
+	if (min > max)
+	{
+		return (NULL);
+	}
+
+	p = malloc((max + 1) * sizeof(int));
+
+	if (p == NULL)
+	{
+		return (NULL);
+	}
+	i = 0;
+
+	for (i = 0; i <= max; i++)
+	{
+		p[i] = i;
+	}
+
+	return (p);
 }
