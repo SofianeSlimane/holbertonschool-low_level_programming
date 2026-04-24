@@ -1,5 +1,29 @@
 #include "main.h"
 #include <stdlib.h>
+
+/**
+ * get_bytes_num - get the number of bytes to allocate
+ * @min: range 1
+ * @max: range 2
+ * Return: integer
+ */
+unsigned int get_bytes_num(int min, int max)
+{
+	unsigned int result;
+
+	result = 0;
+	if (min >= 0 && max >= 0)
+	{
+		printf("hello");
+		result = (max - min) + 1;
+	}
+	else if (min < 0 && max < 0)
+		result = (max - min) * (-1);
+	else if (min < 0 && max > 0)
+		result = (min * (-1)) + max + 1;
+	printf("Number of bytes: %d\n", result);
+	return (result * sizeof(int));
+}
 /**
  * array_range - creates an array of integers
  * @min: miniumum
@@ -10,24 +34,26 @@
 int *array_range(int min, int max)
 {
 	int *p = NULL;
-	int i;
+	int i, j;
+	unsigned int bytes;
 
 	if (min > max)
 	{
 		return (NULL);
 	}
 
-	p = malloc((max + 1) * sizeof(int));
+	bytes = get_bytes_num(min, max);
+	p = malloc(bytes);
 
 	if (p == NULL)
 	{
 		return (NULL);
 	}
-	i = 0;
-
-	for (i = 0; i <= max; i++)
+	j = 0;
+	for (i = min; i <= max; i++)
 	{
-		p[i] = i;
+		p[j] = i;
+		j++;
 	}
 
 	return (p);
