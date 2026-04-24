@@ -14,14 +14,12 @@ unsigned int get_bytes_num(int min, int max)
 	result = 0;
 	if (min >= 0 && max >= 0)
 	{
-		printf("hello");
 		result = (max - min) + 1;
 	}
 	else if (min < 0 && max < 0)
 		result = (max - min) * (-1);
 	else if (min < 0 && max > 0)
 		result = (min * (-1)) + max + 1;
-	printf("Number of bytes: %d\n", result);
 	return (result * sizeof(int));
 }
 /**
