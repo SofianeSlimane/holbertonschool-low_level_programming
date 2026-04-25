@@ -1,5 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * _strdup - copy a string taken as a parameter and return it
@@ -23,7 +24,6 @@ char *_strdup(char *str)
 
 	if (str2 == NULL)
 	{
-		free(str2);
 		return (NULL);
 	}
 	for (i = 0; i <= j; i++)
@@ -32,7 +32,6 @@ char *_strdup(char *str)
 	}
 
 	return (str2);
-	free(str2);
 }
 
 /**
@@ -50,12 +49,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 	new_dog = malloc(sizeof(dog_t));
 	if (new_dog == NULL)
 	{
-		free(new_dog);
 		return (NULL);
 	}
 	new_dog->name = _strdup(name);
 	new_dog->age = age;
 	new_dog->owner = _strdup(owner);
-
+	if (new_dog->name == NULL || new_dog->owner == NULL)
+	{
+		free(new_dog);
+		return (NULL);
+	}
 	return (new_dog);
 }
