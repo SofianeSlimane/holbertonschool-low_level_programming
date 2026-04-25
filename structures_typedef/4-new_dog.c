@@ -2,13 +2,6 @@
 #include <stdlib.h>
 
 /**
- * new_dog - create a new dog
- * @name: name
- * @age: age
- * @owner: owner
- * Return: pointer to new dog
- */
-/**
  * _strdup - copy a string taken as a parameter and return it
  * @str: pointer to string to be copied
  * Return: pointer to string containing copy of given string
@@ -19,6 +12,7 @@ char *_strdup(char *str)
 	int i;
 	char *str2;
 	int j;
+
 	if (str == NULL)
 	{
 		return (NULL);
@@ -26,7 +20,7 @@ char *_strdup(char *str)
 	for (j = 0; str[j] != '\0'; j++)
 	{}
 	str2 = malloc(sizeof(char) * j + 1);
-	
+
 	if (str2 == NULL)
 	{
 		return (NULL);
@@ -40,6 +34,13 @@ char *_strdup(char *str)
 	free(str2);
 }
 
+/**
+ * new_dog - create a new dog
+ * @name: name
+ * @age: age
+ * @owner: owner
+ * Return: pointer to new dog
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 
