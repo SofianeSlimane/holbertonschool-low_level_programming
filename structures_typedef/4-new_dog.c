@@ -23,6 +23,7 @@ char *_strdup(char *str)
 
 	if (str2 == NULL)
 	{
+		free(str2);
 		return (NULL);
 	}
 	for (i = 0; i <= j; i++)
