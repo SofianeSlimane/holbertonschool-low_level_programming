@@ -34,11 +34,9 @@ char *string = va_arg(args, char*);
 if (string == NULL)
 {
 printf("(nil)");
+return; 
 }
-else
-{
 printf("%s", string);
-}
 }
 /**
  * print_f - print float
