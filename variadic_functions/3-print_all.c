@@ -35,7 +35,10 @@ if (string == NULL)
 {
 printf("(nil)");
 }
+else
+{
 printf("%s", string);
+}
 }
 /**
  * print_f - print float
