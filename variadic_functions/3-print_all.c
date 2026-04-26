@@ -55,34 +55,35 @@ printf("%f", va_arg(args, double));
  */
 void print_all(const char * const format, ...)
 {
-int i, j;
-char *separator = "";
-va_list args;
-sp_t tab[] = {
-{"c", print_c},
-{"i", print_i},
-{"f", print_f},
-{"s", print_s},
-{NULL, NULL}
-};
-i = 0;
-j = 0;
-va_start(args, format);
-while (format[i] != '\0')
-{
-j = 0;
-while (tab[j].sp != NULL)
-{
-if (*tab[j].sp == format[i])
-{
-printf("%s", separator);
-tab[j].f(args);
-separator = ", ";
-break;
-}
-j++;
-}
-i++;
-}
-printf("\n");
+	int i, j;
+	char *separator = "";
+	va_list args;
+	sp_t tab[] = {
+	{"c", print_c},
+	{"i", print_i},
+	{"f", print_f},
+	{"s", print_s},
+	{NULL, NULL}
+	};
+	i = 0;
+	j = 0;
+
+	va_start(args, format);
+	while (format[i] != '\0')
+	{
+		j = 0;
+		while (tab[j].sp != NULL)
+		{
+			if (*tab[j].sp == format[i])
+			{
+				printf("%s", separator);
+				tab[j].f(args);
+				separator = ", ";
+				break;
+			}
+			j++;
+		}
+		i++;
+	}
+	printf("\n");
 }
