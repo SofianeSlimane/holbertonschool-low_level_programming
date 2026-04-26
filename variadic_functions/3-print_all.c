@@ -65,6 +65,8 @@ void print_all(const char * const format, ...)
 	{"s", print_s},
 	{NULL, NULL}
 	};
+	if (format == NULL)
+		return;
 	i = 0;
 	j = 0;
 
