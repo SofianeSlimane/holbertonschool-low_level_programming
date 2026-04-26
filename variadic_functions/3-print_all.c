@@ -34,7 +34,7 @@ char *string = va_arg(args, char*);
 if (string == NULL)
 {
 printf("(nil)");
-return; 
+return;
 }
 printf("%s", string);
 }
