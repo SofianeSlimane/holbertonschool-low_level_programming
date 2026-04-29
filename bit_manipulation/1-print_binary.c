@@ -13,32 +13,28 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int table;
+	unsigned long int table, overflows_ulongmax;
 
 	if (n == 0)
 	{
 		_putchar('0');
 		return;
 	}
-	else if (n == ULONG_MAX)
+	overflows_ulongmax = 0;
+	table = 1;
+	while (table <= n)
 	{
-		table = n;
-	}
-	else if (n < ULONG_MAX)
-	{
-
-		table = 1;
-		while (table <= n)
+		if (table * 2 >= ULONG_MAX - table * 2)
 		{
-			if (table * 2 > ULONG_MAX - table * 2)
-			{
-				break;
+			overflows_ulongmax = 1;
+			break;
 
-			}
-			table *= 2;
 		}
+		table *= 2;
 	}
-	table >>= 1;
+	if (!overflows_ulongmax)
+		table >>= 1;
+
 	while (table > 0)
 	{
 		if (n >= table)
