@@ -1,53 +1,48 @@
 #include "main.h"
-
+#include <stdlib.h>
 
 
 
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-     char *binary;
-     unsigned long int table;
-     unsigned int i, j, k;
-     
-     binary = "";     
-     if (n == 0)
-     {
-     	binary += '0';
-     }
-     table = 1;
-     while (table <= n)
-     {
-	     table *= 2;
-     }
-     table >>= 1;
-     while (table > 0)
-     {
-	     if (n >= table)
-	     {
-		     binary += '1';
-		     n -= table;
-             }
-	     else if (table > n)
-             {
-		     binary += '0';
-             }
-	     table >>= 1;
-     }
-	i = 0;
-	while (binary[i] != '\0')
+	unsigned long int i = 0, len = 0, p = 1, cp = n;
+	char bit = ' ';
+	char *binary_string;
+
+	p = 1;
+	cp = n;
+	while (cp != 1)
 	{
+		cp >>= 1;
+		p *= 2;
+		len++;
+	}
+	if (index > len)
+	{
+		return (-1);
+	}
+	binary_string = malloc((sizeof(char) * len) + 2);
+	if (binary_string == NULL)
+	{
+		return (-1);
+	}
+	while (p > 0)
+	{
+		if (n >= p)
+		{
+			binary_string[i] = '1';
+			n -= p;
+		}
+		else
+		{
+			binary_string[i] = '0';
+		}
+		p >>= 1;
 		i++;
 	}
-	j = i - 1;
-	while (binary[j] != '\0')
-	{
-		if (k == index)
-		{
-			break;
-		}
-		j--;
-		k++;
-	}
-	return (binary[j] = '0');
+	binary_string[i] = '\0';
+	bit = binary_string[len - index];
+	free(binary_string);
+	return (bit - '0');
 }
