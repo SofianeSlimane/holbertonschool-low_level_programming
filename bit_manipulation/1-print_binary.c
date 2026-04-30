@@ -13,32 +13,24 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int p, cp;
+	unsigned long int p = 1, l = 0, b = 0, mask = 1;
 
-	if (n == 0)
+	while (p * 2 <= n)
 	{
-		_putchar('0');
-		return;
-	}
-	p = 1;
-	cp = n;
-	while (cp != 1)
-	{
-		cp >>= 1;
 		p *= 2;
+		l++;
+	}
+	while (1)
+	{
+		b = (mask << l) & n;
+		if (b > 0)
+			_putchar('1');
+		else
+			_putchar('0');
+
+		if (l == 0)
+			break;
+		l--;
 	}
 
-	while (p > 0)
-	{
-		if (n >= p)
-		{
-			_putchar('1');
-			n -= p;
-		}
-		else
-		{
-			_putchar('0');
-		}
-		p >>= 1;
-	}
 }
