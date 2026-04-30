@@ -15,7 +15,7 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int cp = n, l = 0, b = 0, mask = 1;
 
-	while (cp != 1)
+	while (cp > 1)
 	{
 		cp >>= 1;
 		l++;
