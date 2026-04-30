@@ -13,41 +13,32 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int t, overflows_ulongmax;
+	unsigned long int p, cp;
 
 	if (n == 0)
 	{
 		_putchar('0');
 		return;
 	}
-	overflows_ulongmax = 0;
-	t = 1;
-	while (t <= n)
+	p = 1;
+	cp = n;
+	while (cp != 1)
 	{
-		if (t * 2 >= ULONG_MAX - t * 2)
-		{
-			t *= 2;
-			overflows_ulongmax = 1;
-			break;
-		}
-		t *= 2;
-	}
-	if (!overflows_ulongmax)
-	{
-		t >>= 1;
+		cp >>= 1;
+		p *= 2;
 	}
 
-	while (t > 0)
+	while (p > 0)
 	{
-		if (n >= t)
+		if (n >= p)
 		{
 			_putchar('1');
-			n -= t;
+			n -= p;
 		}
 		else
 		{
 			_putchar('0');
 		}
-		t >>= 1;
+		p >>= 1;
 	}
 }
