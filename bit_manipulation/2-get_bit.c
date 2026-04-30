@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <limits.h>
 
 /**
  * get_bit - get bit at given index
@@ -15,8 +16,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	char bit = ' ';
 	char *binary_string;
 
-	p = 1;
-	cp = n;
+	p = 1, cp = n;
 	while (cp != 1)
 	{
 		cp >>= 1;
@@ -25,13 +25,15 @@ int get_bit(unsigned long int n, unsigned int index)
 	}
 	if (index > len)
 	{
+		if (index > (CHAR_BIT * sizeof(unsigned long int)) - 1)
+			return (-1);
+
 		return (0);
 	}
 	binary_string = malloc((sizeof(char) * len) + 2);
+
 	if (binary_string == NULL)
-	{
 		return (-1);
-	}
 	while (p > 0)
 	{
 		if (n >= p)
