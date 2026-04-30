@@ -1,7 +1,12 @@
 #include "main.h"
 #include <stdlib.h>
 
-
+/**
+ * get_bit - get bit at given index
+ * @n: unsigned long int
+ * @index: index
+ * Return: 0, 1, or -1
+ */
 
 
 int get_bit(unsigned long int n, unsigned int index)
@@ -20,7 +25,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	}
 	if (index > len)
 	{
-		return (-1);
+		return (0);
 	}
 	binary_string = malloc((sizeof(char) * len) + 2);
 	if (binary_string == NULL)
