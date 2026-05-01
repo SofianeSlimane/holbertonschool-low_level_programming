@@ -8,35 +8,26 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int nbDec, power;
-	int i, j;
+	unsigned int i, sum = 0, mask = 1, bit = 0, len;
 
 	if (b == NULL)
-	{
 		return (0);
-	}
-	i = 0;
-	while (b[i] != '\0')
+
+	for (len = 0; b[len]; len++)
+	{}
+
+	mask <<= len - 1;
+	for (i = 0; b[i]; i++)
 	{
-		if (b[i] != '0' && b[i] != '1')
-		{
+		bit = (b[i] - 48);
+
+		if (bit == 1)
+			sum += mask;
+		else if (bit != 0)
 			return (0);
-		}
-		i++;
-	}
-	power = 1;
-	j = i - 1;
-	nbDec = 0;
 
-	while (j >= 0)
-	{
-	if (b[j] == '1')
-	{
-		nbDec += power;
-	}
-	  power *= 2;
-	  j--;
+		mask >>= 1;
 	}
 
-	return (nbDec);
+	return (sum);
 }
