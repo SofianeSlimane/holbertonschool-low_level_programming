@@ -9,18 +9,19 @@
  */
 
 
-int get_bit(unsigned long int n, unsigned int index)
+int get_bit_at_index(unsigned long int n, unsigned int index)
 {
-	unsigned long int mask = 1 << index, result = 0;
+	unsigned long int mask = 1, result = 0;
 
 	if (index > (sizeof(unsigned long int) * 8) - 1)
 	{
 		return (-1);
 	}
+	mask <<= index;
 	result = n & mask;
 
 	if (result > 0)
-		return (1);
+	return (1);
 
 	return (0);
 }
@@ -32,8 +33,8 @@ int get_bit(unsigned long int n, unsigned int index)
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int flip_count = 0, digit_n = 0, digit_m = 0,
-	largest_integer = 0;
+	unsigned long int flip_count = 0, largest_integer = 0;
+	unsigned int digit_n = 0, digit_m = 0;
 	int mov_left = 0;
 
 	if (n > m)
@@ -48,13 +49,16 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		largest_integer >>= 1;
 		mov_left++;
 	}
+
 	while (mov_left >= 0)
 	{
-		digit_n = get_bit(n, mov_left);
-		digit_m = get_bit(m, mov_left);
+		digit_n = get_bit_at_index(n, mov_left);
+		digit_m = get_bit_at_index(m, mov_left);
 
 		if (digit_n != digit_m)
+		{
 			flip_count++;
+		}
 
 		mov_left--;
 
