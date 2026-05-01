@@ -8,7 +8,8 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i, sum = 0, mask = 1, bit = 0, len;
+	unsigned int sum = 0, mask = 1, bit = 0;
+	int len;
 
 	if (b == NULL)
 		return (0);
@@ -16,17 +17,18 @@ unsigned int binary_to_uint(const char *b)
 	for (len = 0; b[len]; len++)
 	{}
 
-	mask <<= len - 1;
-	for (i = 0; b[i]; i++)
+	len--;
+	while (len >= 0)
 	{
-		bit = (b[i] - 48);
+		bit = (b[len] - 48);
 
 		if (bit == 1)
 			sum += mask;
 		else if (bit != 0)
 			return (0);
 
-		mask >>= 1;
+		mask <<= 1;
+		len--;
 	}
 
 	return (sum);
