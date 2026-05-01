@@ -43,7 +43,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	else if (m == n)
 		largest_integer = n;
 
-	while (largest_integer != 1)
+	while (largest_integer > 1)
 	{
 		largest_integer >>= 1;
 		mov_left++;
