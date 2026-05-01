@@ -2,7 +2,7 @@
 #include <limits.h>
 
 /**
- * get_bit - get bit at given index
+ * get_bit_at_index - get bit at given index
  * @n: unsigned long int
  * @index: index
  * Return: 0, 1, or -1
